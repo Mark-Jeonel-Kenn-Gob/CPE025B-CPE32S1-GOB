@@ -1,0 +1,35 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    font-style: oblique;
+}
+
+h2 {
+    font-weight: 600;
+    font-style: normal;
+}
+
+#header {
+    border-bottom: 2px solid gray;
+    margin-bottom: 10px;
+}
+
+.sample_div p {
+    color: slategray;
+}
+
+.sample_div p::first-line {
+    font-weight: bold;
+}
+
+a[href^="mailto"] {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
