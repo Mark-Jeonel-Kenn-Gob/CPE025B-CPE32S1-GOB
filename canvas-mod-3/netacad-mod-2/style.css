@@ -1,29 +1,35 @@
-.box-model {
-    margin: 40px auto;
-    width: fit-content;
-    text-align: center;
-    font-size: 14px;
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.margin-box {
-    background-color: #f8d7da;
-    padding: 20px;
+h1 {
+    font-weight: 900;
+    font-style: oblique;
 }
 
-.border-box {
-    background-color: #fff3cd;
-    border: 4px solid #856404;
-    padding: 20px;
+h2 {
+    font-weight: 600;
+    font-style: normal;
 }
 
-.padding-box {
-    background-color: #d1ecf1;
-    padding: 20px;
+#header {
+    border-bottom: 2px solid gray;
+    margin-bottom: 10px;
 }
 
-.content-box {
-    background-color: #d4edda;
-    padding: 20px;
+.sample_div p {
+    color: slategray;
+}
+
+.sample_div p::first-line {
     font-weight: bold;
 }
 
+a[href^="mailto"] {
+    color: orange;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+}
