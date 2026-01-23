@@ -1,0 +1,29 @@
+.box-model {
+    margin: 40px auto;
+    width: fit-content;
+    text-align: center;
+    font-size: 14px;
+}
+
+.margin-box {
+    background-color: #f8d7da;
+    padding: 20px;
+}
+
+.border-box {
+    background-color: #fff3cd;
+    border: 4px solid #856404;
+    padding: 20px;
+}
+
+.padding-box {
+    background-color: #d1ecf1;
+    padding: 20px;
+}
+
+.content-box {
+    background-color: #d4edda;
+    padding: 20px;
+    font-weight: bold;
+}
+
