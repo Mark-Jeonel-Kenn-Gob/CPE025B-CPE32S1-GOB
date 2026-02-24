@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff; 
+    color: #1c1c1c; 
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Header Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: #ffffff;
+    border-bottom: 2px solid #fce4ec; /* Light pink accent line */
+    animation: fadeIn 1.5s ease-out forwards; /* Step 1 */
+}
+
+.fade-in-header h1 {
+    margin: 0;
+    color: #880e4f; /* Deep maroon logo */
+    font-size: 1.7rem;
+    letter-spacing: -0.5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1c1c1c;
+    margin-left: 1.5rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d81b60; /* Vibrant pink/red on hover */
+}
+
+/* -----------------------------------------
+   Hero Layout
+   ----------------------------------------- */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5rem 5%;
+    gap: 3rem;
+    background: radial-gradient(circle at top right, #fff5f8, #ffffff); /* Extremely subtle pink glow */
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+    color: #4a148c; /* Deep violet */
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 1.1;
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
+.hero-visual {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* -----------------------------------------
+   Step 2: Button Hover Animation 
+   ----------------------------------------- */
+.cta-button {
+    background-color: #d81b60; /* Vibrant pink/red */
+    color: white;
+    border: none;
+    padding: 14px 32px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 12px; /* Slightly squared off for a "bag" aesthetic */
+    cursor: pointer;
+    box-shadow: 4px 4px 0px rgba(136, 14, 79, 0.2); /* Maroon offset shadow */
+    
+    /* Step 2: smooth transition for color and transform */
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
+                background-color 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.cta-button:hover {
+    background-color: #880e4f; /* changes to maroon */
+    transform: scale(1.08) translateY(-2px); /* scale up */
+    box-shadow: 6px 6px 0px rgba(136, 14, 79, 0.3);
+}
+
+/* Product Image Keyframe Rotation  */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.product-image {
+    width: 280px;
+    height: 280px;
+    background-color: #fce4ec; /* light pink bg */
+    border: 3px dashed #d81b60; /* dashed border mimicking stitching or smthn*/
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* 10s duration, infinite loop */
+    animation: spin 10s linear infinite; 
+}
+
+/* Represents a modular bag pouch */
+.abstract-bag-module {
+    width: 120px;
+    height: 140px;
+    background-color: #4a148c;
+    border-radius: 15px;
+    box-shadow: inset 0 -10px 0 rgba(0,0,0,0.2);
+}
+
+/* Animate Feature List */
+.features-section {
+    padding: 4rem 5%;
+}
+
+.features-section h3 {
+    color: #880e4f; /* Maroon */
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.feature-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@keyframes slideInRight {
+    0% {
+        transform: translateX(-80px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.feature-item {
+    background-color: #ffffff;
+    margin: 15px 0;
+    padding: 20px;
+    border: 2px solid #f8bbd0; /* Soft pink border */
+    border-left: 8px solid #d81b60; /* Thick pink/red accent */
+    border-radius: 8px;
+    
+    /* Step 4: Apply animation */
+    opacity: 0; 
+    animation: slideInRight 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+}
+
+.feature-item strong {
+    color: #4a148c; /* Violet headers for features */
+    font-size: 1.1rem;
+}
+
+/* Staggering the start times (step 4?)*/
+.feature-item:nth-child(1) { animation-delay: 0.1s; }
+.feature-item:nth-child(2) { animation-delay: 0.3s; }
+.feature-item:nth-child(3) { animation-delay: 0.5s; }
+.feature-item:nth-child(4) { animation-delay: 0.7s; }
+
+/* Pricing Section (Custom Addition) */
+.pricing-section {
+    padding: 4rem 5%;
+    background-color: #fffafb;
+    text-align: center;
+}
+
+.pricing-section h3 {
+    color: #4a148c;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: white;
+    border: 2px solid #eeeeee;
+    border-radius: 12px;
+    padding: 2rem;
+    max-width: 350px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.pricing-card.premium {
+    border-color: #d81b60;
+    position: relative;
+    transform: scale(1.05);
+}
+
+.pricing-card h4 {
+    color: #880e4f;
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1c1c1c;
+    margin-top: 1rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    font-size: 0.9rem;
+}
