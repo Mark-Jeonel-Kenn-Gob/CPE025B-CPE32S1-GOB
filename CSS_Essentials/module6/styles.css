@@ -128,7 +128,7 @@ nav a:hover {
     animation: spin 10s linear infinite; 
 }
 
-/* Represents a modular bag pouch */
+/* used to rep modular bag pouch, now image di ko nalang remove haha */
 .abstract-bag-module {
     width: 120px;
     height: 140px;
