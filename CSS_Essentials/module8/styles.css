@@ -1,0 +1,58 @@
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  font-size: 16px;
+  color: #7f0000;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f7f6;
+}
+
+.header, .footer {
+  background-color: rgb(214, 255, 239);
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+main .about h2 {
+  font-size: 1.6em;
+}
+main .about p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+main .features h2 {
+  font-size: 1.6em;
+}
+main .features .feature-list {
+  list-style-type: disc;
+  padding-left: 25px;
+}
+main .features .feature-list li {
+  border-radius: 6px;
+  padding: 8px;
+  margin-bottom: 8px;
+  background-color: rgb(244.8, 249.72, 255);
+  color: rgb(0, 153, 94);
+}
+main .example h2 {
+  font-size: 1.6em;
+}
+main .example .example-text {
+  border-radius: 12px;
+  padding: 15px;
+  background-color: rgb(244.8, 249.72, 255);
+  border: 1px dashed #0004ff;
+}
+
+.footer p {
+  font-size: 1em;
+  margin: 0;
+}
