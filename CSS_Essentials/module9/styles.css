@@ -1,0 +1,141 @@
+/* 1. Base Typography and Readable Text */
+html {
+    font-size: 16px; /* Set base font-size for rem calcs */
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif; /* distinguishable sans-serif font */
+    color: #2c3e50; /* Dark text - better readability */
+    background-color: #f8f9fa; /* Light gray bg to lessen the glare oha */
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* 2. Identifiable Links */
+a {
+    color: #d81b60;
+    text-decoration: underline; /* underline links for clear identification */
+    font-weight: 600;
+}
+
+a:hover,
+a:focus {
+    color: #880e4f; /* Darker on hover/focus for better interaction visib */
+    text-decoration: none; /* Inverts visual feedback on interaction */
+    outline: 2px dashed #880e4f; /* Add visible focus indicator for keyboard nav */
+    outline-offset: 3px;
+}
+
+/* 3. Clear Navigation */
+.header {
+    background-color: #121212;
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-nav {
+    background-color: #ffffff;
+    border-bottom: 2px solid #e0e0e0;
+    padding: 1rem 2rem;
+}
+
+.navigation-menu {
+    list-style: none; /* Remove default list style */
+    padding: 0; /* Remove default padding */
+    margin: 0;
+}
+
+.navigation-menu li {
+    display: inline-block; /* Display list items inline but allow padding */
+    margin-right: 25px; /* Add spacing between the list items */
+}
+
+.navigation-menu a {
+    text-decoration: none; /* Remove default underline from nav links specifically */
+    color: #2c3e50; /* Set text color for the links */
+    font-size: 1.1rem;
+}
+
+.navigation-menu a:hover,
+.navigation-menu a:focus {
+    text-decoration: underline; /* Add underline on hover for visual feedback */
+    color: #d81b60;
+}
+
+/* 4. Simple and Predictable Layout (Flexbox) */
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    margin: 2rem auto;
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.sidebar {
+    flex: 1;
+    order: 1; /* Sidebar comes first */
+}
+
+.sidebar-box {
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.main-content {
+    flex: 3; /* Made slightly wider than module example for a better reading exp */
+    order: 2; /* Main content follows */
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* 5. Text Size Classes and Contrast */
+.large-text {
+    font-size: 1.25rem; /* Larger font size for better visibility */
+    font-weight: 500;
+}
+
+.high-contrast-text {
+    color: #000000; /* Black text */
+    background-color: #ffffff; /* White background */
+    padding: 1.5rem;
+    border: 2px solid #000000; /* Extra border to def the high-contrast boundary */
+    margin-top: 1.5rem;
+    font-weight: bold;
+}
+
+/* 6. Screen Reader Accessibility */
+.mobile-menu-btn {
+    background: none;
+    border: 2px solid #ffffff;
+    color: #ffffff;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.75rem;
+    cursor: pointer;
+}
+
+.screen-reader-text {
+    position: absolute; /* Position it out of the flow of document */
+    width: 1px; 
+    height: 1px; /* Minimize size */
+    margin: -1px; /* Place out of viewport */
+    padding: 0; /* Remove padding */
+    overflow: hidden; /* Hide content that overflows its box */
+    clip: rect(0, 0, 0, 0); /* Clip content to a 0 rectangle */
+    border: 0; /* Remove borders */
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #e0e0e0;
+    margin-top: 2rem;
+}
+

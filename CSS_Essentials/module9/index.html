@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechKenn | Accessibility Portal</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    
+    <header class="header">
+        <h1>TechKenn Accessibility Portal</h1>
+        
+        <button aria-labelledby="menu-button" class="mobile-menu-btn">
+            <span class="screen-reader-text" id="menu-button">Open Navigation Menu</span>
+            &#9776; 
+        </button>
+    </header>
+
+    <nav class="main-nav">
+        <ul class="navigation-menu">
+            <li><a href="/">Terminal (Home)</a></li>
+            <li><a href="/about">About Us</a></li>
+            <li><a href="/services">Operations</a></li>
+            <li><a href="/accessibility">Accessibility Statement</a></li>
+        </ul>
+    </nav>
+
+    <div class="content-wrapper">
+        <aside class="sidebar">
+            <div class="sidebar-box">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#contrast">Contrast Guide</a></li>
+                    <li><a href="#fonts">Typography</a></li>
+                    <li><a href="#screen-reader">Screen Readers</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section class="intro">
+                <h2>Building an Inclusive Web</h2>
+                <p>At TechKenn, we believe digital content should be usable and understandable for as many people as possible, regardless of their abilities.</p>
+                <p>For more details on our compliance, visit our <a href="https://example.com/legal">Legal and Accessibility Center</a>.</p>
+            </section>
+
+            <section class="typography-demo">
+                <h2>Readable Text Demonstration</h2>
+                <p>This is standard text using our base font size. It uses a dark slate color on a soft off-white background to reduce glare and improve reading comfort.</p>
+                
+                <p class="large-text">This text is significantly larger (1.25rem), designed for enhanced visibility and emphasis.</p>
+                
+                <div class="high-contrast-text">
+                    <strong>High Contrast Block:</strong> This specific container enforces strict black text on a pure white background, guaranteeing maximum contrast for visually impaired users.
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 TechKenn Corporation. Engineered for Everyone.</p>
+    </footer>
+
+</body>
+
+</html>
+
